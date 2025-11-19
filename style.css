@@ -1,0 +1,128 @@
+/* ========================= Global ========================= */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ======================== Navigation ========================= */
+
+nav {
+  box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.603);
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+}
+
+/* ========================= Header ===================== */
+
+header {
+  height: 90vh;
+  display: flex;
+}
+
+.headerLeft {
+  width: 60%;
+  font-size: larger;
+  padding: 11rem;
+  text-align: center;
+}
+
+.headerRight {
+  width: 40%;
+}
+
+.elenaJoyImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.headerLeft h1 {
+  margin-bottom: 1rem;
+}
+
+.headerLeft p {
+  margin-bottom: 2rem;
+}
+
+.headerLeft button {
+  padding: 0.8rem 3rem;
+  color: blue;
+  font-size: medium;
+  border: 0.15rem solid black;
+}
+
+
+/* ============================= About Section ======================= */
+
+#aboutSection {
+  height: 100vh;
+  display: flex;
+}
+
+.aboutImage {
+  width: 40%;
+}
+
+.aboutInfo {
+  width: 60%;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: larger;
+}
+
+.aboutInfo h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: sans-serif;
+}
+
+.aboutImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ================================= Gallery ============================ */
+
+#gallerySection {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#gallerySection img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery1 {
+  grid-column: 1 / 3;
+}
+
+.gallery2 {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+}
+
+.gallery3 {
+  grid-column: 1 / 2;
+}
+
+.gallery4 {
+  grid-column: 2 / 3;
+}

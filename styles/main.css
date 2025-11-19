@@ -1,0 +1,280 @@
+/* ========================= Global ========================= */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: great vibes;
+  src: url(fonts/greatVibes/GreatVibes-Regular.ttf);
+}
+
+@font-face {
+  font-family: playfair regular;
+  src: url(fonts/playfair/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: playfair medium;
+  src: url(fonts/playfair/PlayfairDisplay-Medium.ttf);
+}
+
+body {
+  font-family: playfair regular;
+  animation: opening 1s ease-in-out;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ======================== Navigation ========================= */
+
+nav {
+  box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.603);
+  width: 100%;
+  z-index: 3;
+   min-height: 10vh;
+  overflow: hidden;
+}
+
+/* .navContainer {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+} */
+ .navContainer {
+  width: 95%;
+  margin: auto;
+  min-height: 10vh;
+  overflow: hidden;
+}
+
+.navLinks {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  float:right;
+}
+
+/* .navLinks a {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-family: playfair medium;
+  padding: 1rem;
+} */
+.navLinks a {
+  margin-left: 1rem;  
+  color: black;
+  font-size: 1.2rem;
+  font-family: playfair medium;
+   line-height:10vh;
+}
+.navLinks a:hover {
+  color: rgb(0, 76, 255);
+}
+
+.logo {
+  margin-right: auto;
+  float: left; 
+         
+}
+
+.logo h3 {
+  font-family: great vibes;
+  font-size: 2rem;
+  line-height:10vh;
+}
+
+/* ====================== Hamburger ============================ */
+
+/* .line {
+  height: 0.35rem;
+  width: 3rem;
+  background-color: rgb(90, 90, 90);
+  margin: 0.3rem;
+} */
+
+/* .hamburger {
+  z-index: 1;
+  display: none;
+} */
+ /* removing hamburger cos the we didnt add responsiveness */
+
+
+/* ========================= Header ===================== */
+
+.headerContainer {
+  overflow: hidden;
+  z-index: 1;
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin-left: auto;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20rem;
+  flex-grow: 2;
+}
+
+.headerLeft p {
+  padding: 2rem 5rem;
+  font-size: 1.2rem;
+  color: rgb(80, 80, 80);
+}
+
+.headerLeft h1 {
+  padding-top: 1rem;
+}
+
+.headerLeft a {
+  padding: 0.8rem 3rem;
+  border: 0.15rem solid black;
+  margin-bottom: 1rem;
+}
+
+.headerRight {
+  z-index: -2;
+  flex-basis: 20rem;
+  flex-grow: 1;
+  background: linear-gradient(#dad8dd, #dad1d4);
+  position: relative;
+}
+
+.elenaJoyImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ============================== Animations For Header ========================== */
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes plantEnterence {
+  from {
+    transform: translateY(10%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0%) rotateX(0deg);
+  }
+}
+
+@keyframes plantAnimation {
+  from {
+    transform: rotateZ(-10deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* ============================= About Section ======================= */
+
+.aboutContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aboutImage {
+  position: relative;
+  min-height: 100vh;
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+.aboutImage h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1rem;
+  font-size: 2rem;
+}
+
+.aboutInfo {
+  color: white;
+  background-color: rgb(65, 65, 65);
+  flex-basis: 20rem;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+  padding: 4rem;
+}
+
+.aboutInfo h3 {
+  padding: 1rem 0rem;
+}
+
+.aboutInfo p {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+
+.aboutInfo h1 {
+  padding-bottom: 2rem;
+  font-family: "great vibes", sans-serif;
+  font-weight: lighter;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.aboutImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ================================= Gallery ============================ */
+
+.galleryContainer {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.galleryContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery1 {
+  grid-column: 1 / 3;
+}
+
+.gallery2 {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+}
+
+.gallery3 {
+  grid-column: 1 / 2;
+}
+
+.gallery4 {
+  grid-column: 2 / 3;
+}
